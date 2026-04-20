@@ -16,17 +16,18 @@ function start() {
 
     document.getElementById('time').textContent = `${h}:${m}:${s}.${ms}`;
   }, 10);
+  console.log("タイマーがスタートしました");
 }
 
-$(document).ready(function() {
-  $('#stop').click(function() {
-    clearInterval(timerInterval);
-  });
+function stop() {
+  clearInterval(timerInterval);
+  console.log("タイマーがストップしました");
+}
 
-  $('#reset').click(function() {
-    clearInterval(timerInterval);
-    elapsedTime = 0;
-    $('#time').text("00:00:00:00");
-  });
-});
+function reset() {
+  clearInterval(timerInterval);
+  elapsedTime = 0;
+  document.getElementById('time').textContent = "00:00:00.00";
+  console.log("タイマーがリセットされました");
+}
 
