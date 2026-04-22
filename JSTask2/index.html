@@ -3,10 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script> 
+     <link rel="stylesheet" href="main.css">
     <title>電卓</title>
 </head>
 <body>
-   
+    <div class="app" id="app">
+       
+        <div id="calculator">
+            <input type="text" id="display" disabled>
+            <div id="buttons">
+                <button class="btn" data-value="1">1</button>
+                <button class="btn" data-value="2">2</button>
+                <button class="btn" data-value="3">3</button>
+                <button class="btn" data-value="4">4</button>
+                <button class="btn" data-value="5">5</button>
+                <button class="btn" data-value="6">6</button>
+                <button class="btn" data-value="7">7</button>
+                <button class="btn" data-value="8">8</button>
+                <button class="btn" data-value="9">9</button>
+                <button class="btn" data-value="0">0</button>
+                <button class="btn" data-value="+">+</button>
+                <button class="btn" data-value="-">-</button>
+                <button class="btn" data-value="*">*</button>
+                <button class="btn" data-value="/">/</button>
+                <button id="equals">=</button>
+                <button id="clear">C</button>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
