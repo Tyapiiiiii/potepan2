@@ -1,11 +1,17 @@
-$(document).ready(function(){
-        $(".buttonA").click(function() {
-            $("#display").val($("#display").val() + $(this).data("value"));
-        });
-        $("#equals").click(function() {
-            $("#display").val(eval($("#display").val()));
-        });
-        $("#clear").click(function() {
-            $("#display").val("");
-        });
-    });
+const result = document.getElementById('display');
+
+function append(value) {
+  result.value += value;
+}
+
+function clearScreen() {
+  result.value = '';
+}
+
+function calculate() {
+  try {
+    result.value = eval(result.value); // 文字列を計算式として実行
+  } catch {
+    result.value = 'Error';
+  }
+}
